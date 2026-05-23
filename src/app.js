@@ -12,7 +12,10 @@ const app = express();
 
 app.use(
   cors({
-    origin: config.frontendUrl,
+    origin: [
+      'http://localhost:5173',
+      'https://ethanaai-task-manager-frontend-production.up.railway.app',
+    ],
     credentials: true,
   })
 );
